@@ -7,7 +7,7 @@ print(s)
 # special characters
 s = "This is a string\nOn two separate lines"
 print(s)
-s = "This is a string with a\ttab in between"
+s = "This is a string\twith some\ttabs in between"
 print(s)
 
 multiline_string = '''This is
@@ -41,3 +41,15 @@ s = 'My cat\'s name is "Whiskers"'
 # OR:
 s = "My cat's name is \"Whiskers\""
 
+# Backslash in a string
+s = "This \\ string \\ contains \\ four \\ backslashes"
+print(s)
+
+
+# Exercise: Create a variable to store the string: a\\b"b'b'\c	bd
+#           Note: there is a tab between the c and the last b
+#           Then use that string to create a list containing the elements:
+#           a\\, ", ', '\c	, and d
+
+# Exercise: how would I write an f-string that says "My mark in [class] is [mark]"
+#           if I have my mark and class stored in variables?
