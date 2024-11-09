@@ -1,7 +1,7 @@
 # string formatting with f-strings
 name = "Daniel"
 age = 25
-s = f"Hi, my name is {name} and I am {age} years old"
+s = f"Hi, my name is {name} and I am turning {age + 1} years old next year"
 print(s)
 
 # special characters
@@ -42,9 +42,8 @@ s = 'My cat\'s name is "Whiskers"'
 s = "My cat's name is \"Whiskers\""
 
 # Backslash in a string
-s = "This \\ string \\ contains \\ four \\ backslashes"
+s = "l\\m\\n\\o\\p"
 print(s)
-
 
 # Exercise: Create a variable to store the string: a\\b"b'b'\c	bd
 #           Note: there is a tab between the c and the last b
