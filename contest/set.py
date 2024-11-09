@@ -6,17 +6,17 @@ print(list_of_words)
 set_of_words = set()
 for word in list_of_words:
     set_of_words.add(word)
-# print(set_of_words)
+print(set_of_words)
 
 # Explain that sets are unordered
 
 # Set literal
-# my_pets = {"cat", "dog", "dog", "cat", "rabbit"}
-# print(my_pets)
+my_pets = {"cat", "dog", "dog", "cat", "rabbit"}
+print(my_pets)
 
 # easier way: directly convert list to set
-# set_of_words = set(list_of_words)
-# print(set_of_words)
+set_of_words = set(list_of_words)
+print(set_of_words)
 
 # Loop over a set
 for word in set_of_words:
@@ -38,6 +38,8 @@ s2 = {3, 4, 5, 6}
 print(s1.union(s2))
 print(s1.intersection(s2))
 print(s1.difference(s2))
+print(s1.symmetric_difference(s2))
+print(s2.difference(s1))
 
 # Other methods that are unnecessary to teach (can use above methods), but for reference:
 print(s1.symmetric_difference(s2))  # only items that exist in ONE set
