@@ -15,7 +15,7 @@ def draw(screen):
     pygame.draw.rect(screen, BLACK, (200, 300, 100, 20))
 
 
-def create_drawing():
+def run_program():
     # Initialize Pygame
     pygame.init()
 
@@ -36,4 +36,4 @@ def create_drawing():
         pygame.display.flip()
         clock.tick(60)
 
-create_drawing()
+run_program()
