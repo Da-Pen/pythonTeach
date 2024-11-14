@@ -37,6 +37,13 @@ print([int(num) for num in text.split(" ")])
 #       at even indices of the original list
 #       Ex. [55, 6, 12, 84, 0, 12] -> [55, 12, 0]
 
+# Example: 2D list with list comprehension
+# Create a 10x10 2D list with all 0's
+l = [[0 for i in range(10)] for j in range(10)]
+print(l)
+
+# Exercise: Create a 10x10 2D list where each element is the product of the indices
+
 
 # Set Comprehension
 # Example: Create a set of all words that start with g in a sentence

@@ -1,3 +1,4 @@
+# TODO: finish
 # Ideas for examples: pet, athlete, singer
 
 # Let's say that I want to create a few pets
