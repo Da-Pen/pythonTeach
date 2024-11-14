@@ -1,0 +1,10 @@
+1. Basic drawing
+    - Filling background
+    - Cartesian plane / coordinate system
+    - Idea that things that are drawn later are drawn "on top" of previous things
+    - Rects, Circles, and Lines
+2. Colors / RGB
+3. Game loop
+4. Keyboard input
+5. Dictionaries via pygame (?)
+5. OOP via pygame

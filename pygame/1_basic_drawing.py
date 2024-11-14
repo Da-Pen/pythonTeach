@@ -21,7 +21,7 @@ def run_program():
 
     # Set up the display
     screen = pygame.display.set_mode((500, 500))
-    pygame.display.set_caption("My Game")
+    pygame.display.set_caption("Drawings!!!")
 
     clock = pygame.time.Clock()
 
