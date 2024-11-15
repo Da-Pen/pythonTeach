@@ -3,16 +3,18 @@ import sys
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
 
 def draw(screen):
     # Fill background
     screen.fill(WHITE)
 
-    # Draw a face
-    pygame.draw.circle(screen, BLACK, (200, 200), 10)
-    pygame.draw.circle(screen, BLACK, (300, 200), 10)
-
-    pygame.draw.rect(screen, BLACK, (200, 300, 100, 20))
+    pygame.draw.circle(screen, BLUE, (250, 250), 50)
+    pygame.draw.rect(screen, BLACK, (0, 200, 150, 100))
+    pygame.draw.line(screen, BLACK, (0, 0), (250, 250))
+    pygame.draw.polygon(screen, GREEN, ((500, 0), (250, 250), (500, 500), (375, 250)))
 
 
 def run_program():

@@ -55,6 +55,13 @@ def challenge_6(screen):
 
 def challenge_7(screen):
     screen.fill(WHITE)
+    pygame.draw.polygon(screen, BLUE, (
+        (250, 0), (300, 200), (500, 250), (300, 300), (250, 500), (200, 300), (0, 250), (200, 200)
+    ))
+
+
+def challenge_8(screen):
+    screen.fill(WHITE)
     pygame.draw.line(screen, BLACK, (100, 0), (100, 500))
     pygame.draw.line(screen, BLACK, (200, 0), (200, 500))
     pygame.draw.line(screen, BLACK, (300, 0), (300, 500))
@@ -62,32 +69,32 @@ def challenge_7(screen):
 
 
 # uses loops
-def challenge_8(screen):
+def challenge_9(screen):
     screen.fill(WHITE)
     for i in range(0, 501, 10):
         pygame.draw.line(screen, BLACK, (i, 0), (i, 500))
 
 
-def challenge_9(screen):
-    screen.fill(BLACK)
-    for i in range(0, 501, 10):
-        pygame.draw.line(screen, GREEN, (i, 0), (0, i))
-
-
 def challenge_10(screen):
     screen.fill(BLACK)
     for i in range(0, 501, 10):
-        pygame.draw.line(screen, GREEN, (i, 0), (0, 500 - i))
+        pygame.draw.line(screen, GREEN, (i, 0), (0, i))
 
 
 def challenge_11(screen):
     screen.fill(BLACK)
     for i in range(0, 501, 10):
         pygame.draw.line(screen, GREEN, (i, 0), (0, 500 - i))
-        pygame.draw.line(screen, GREEN, (i, 500), (500, 500 - i))
 
 
 def challenge_12(screen):
+    screen.fill(BLACK)
+    for i in range(0, 501, 10):
+        pygame.draw.line(screen, GREEN, (i, 0), (0, 500 - i))
+        pygame.draw.line(screen, GREEN, (i, 500), (500, 500 - i))
+
+
+def challenge_13(screen):
     screen.fill(BLACK)
     for i in range(250, 0, -10):
         color = GREEN
@@ -112,7 +119,7 @@ def run_program():
                 pygame.quit()
                 sys.exit()
 
-        challenge_12(screen)
+        challenge_7(screen)
 
         pygame.display.flip()
         clock.tick(60)
