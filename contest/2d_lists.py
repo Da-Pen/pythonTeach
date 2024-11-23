@@ -9,7 +9,7 @@ my_2d_list = [
 
 # 2D list access
 val = my_2d_list[2][1]
-print(val)  # What will this be?
+# print(val)  # What will this be?
 
 # NOTE which coordinate comes first? It's a bit different from Cartesian plane!
 # Exercises: what will these print?
@@ -20,10 +20,10 @@ print(val)  # What will this be?
 # Explain that the length of all rows will generally be the same
 
 # Iterating through a 2D list
-# for row in my_2d_list:
-#     for col in row:
-#         print(col, end="\t")
-#     print()  # print newline
+for row in my_2d_list:
+    for col in row:
+        print(col, end="\t")
+    print()  # print newline
 
 # Exercise: write a function that takes a 2D list and a number and counts the number
 #       of occurrences of that number in the 2D list
@@ -74,7 +74,7 @@ print(val)  # What will this be?
 #       If the word cannot be found, return None
 #   Part 3: Modify it so that the word can also be backwards
 #   Part 4 (advanced): Modify it so that the word can also be diagonal (in any direction)
-#   Part 5 (super advanced): The word can "curve", i.e. direction can change in the middle of the word
+#   Part 5 (super advanced): CCC 2023 J5. The word can "curve", i.e. direction can change in the middle of the word
 
 
 # Alternative ways to create 2D lists

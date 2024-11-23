@@ -96,11 +96,45 @@ def challenge_12(screen):
 
 def challenge_13(screen):
     screen.fill(BLACK)
-    for i in range(250, 0, -10):
+    for i in range(250, 0, -5):
         color = GREEN
-        if i % 20 == 0:
+        if i % 10 == 0:
             color = BLACK
         pygame.draw.circle(screen, color, (250, 250), i)
+
+
+def challenge_14(screen):
+    screen.fill(BLACK)
+    for i in range(0, 500, 5):
+        color = GREEN
+        if i % 10 == 0:
+            color = BLACK
+        pygame.draw.rect(screen, color, (i, i, 500, 500))
+
+
+def challenge_15(screen):
+    screen.fill(BLACK)
+    for i in range(250, 0, -10):
+        pygame.draw.circle(screen, (i, i, i), (250, 250), i)
+
+
+def challenge_16(screen):
+    screen.fill(BLACK)
+    for i in range(250, 0, -10):
+        pygame.draw.circle(screen, (0, 0, i), (250, 250), i)
+
+
+def challenge_17(screen):
+    screen.fill(WHITE)
+    for i in range(250, 0, -10):
+        pygame.draw.circle(screen, (255 - i, 255 - i, 255 - i), (250, 250), i)
+
+
+def challenge_18(screen):
+    screen.fill(BLACK)
+    for i in range(0, 500, 10):
+        pygame.draw.line(screen, (240, 77, 215), (0, 0), (500 - i, i))
+        pygame.draw.line(screen, (240, 77, 215), (500, 500), (500 - i, i))
 
 
 def run_program():
@@ -119,7 +153,7 @@ def run_program():
                 pygame.quit()
                 sys.exit()
 
-        challenge_7(screen)
+        challenge_13(screen)
 
         pygame.display.flip()
         clock.tick(60)

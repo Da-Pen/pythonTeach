@@ -43,6 +43,8 @@ l = [[0 for i in range(10)] for j in range(10)]
 print(l)
 
 # Exercise: Create a 10x10 2D list where each element is the product of the indices
+# Exercise: Given a list of numbers as well as a number n, create a list of all numbers from 1 to n (inclusive)
+#       that are NOT in the given list
 
 
 # Set Comprehension

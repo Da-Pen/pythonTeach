@@ -52,3 +52,12 @@ print(s)
 
 # Exercise: how would I write an f-string that says "My mark in [class] is [mark]"
 #           if I have my mark and class stored in variables?
+
+
+# strings as a list of characters
+s = 'abcdefghijk'
+print(s[3])
+print(s[-2])
+print(s[3:-2])
+for letter in s:
+    print(letter)
