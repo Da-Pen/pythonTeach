@@ -1,3 +1,6 @@
+def j3():
+    pass  # TODO
+
 def j4():  # also s2
     num_same_group_constraints = int(input())
     same_group_constraints = set()

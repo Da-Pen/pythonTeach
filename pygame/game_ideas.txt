@@ -1,0 +1,8 @@
+- Chrome Dino Game
+- Pong
+- Snake
+- Stacker
+- Space Invader
+- Flappy Bird
+- Brick Breaker
+- 2P game where each player needs to click a button to move towards finish line

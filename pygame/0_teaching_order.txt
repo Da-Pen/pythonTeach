@@ -7,4 +7,4 @@
 3. Game loop
 4. Keyboard input
 5. Dictionaries via pygame (?)
-5. OOP via pygame
+6. OOP via pygame

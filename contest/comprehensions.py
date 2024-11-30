@@ -17,7 +17,7 @@ l = [1, 2, 3, 4, 5, 6]
 l_evens = []
 for num in l:
     if num % 2 == 0:
-        l_evens.append(num * 2)
+        l_evens.append(num)
 
 # With list comprehension we can do it like this:
 l_evens = [num for num in l if num % 2 == 0]
@@ -56,6 +56,10 @@ print(g_words)
 # Exercise: create a set of all letters that appear in a string
 # Exercise: given a map from student names to mark, create a set of all failing
 #   students (mark lower than 50).
+# Exercise: Write a function that takes a dictionary that maps student names to marks
+#   and returns create a set of tuples (name, mark) of all failing students (mark < 50)
+#   Ex. failing_students({"DeMar": 35, "Trae": 46, "Luka": 50, "Giannis": 99}) should
+#       return the set {("DeMar", 35), ("Trae", 46)}
 
 
 # Tuple comprehension
@@ -73,7 +77,7 @@ g = (n ** 1000 for n in range(10000))  # creates a generator, runs fast because 
 # print("Done creating generator")
 # print(tuple(g))  # slow because all items have to be evaluated to be converted into a tuple
 
-# Example: Given a list of words, create a new list with only the vowels from each word
+# Example: Given a list of words, create a tuple of words with only the vowels from each word
 l = ["hello", "it's", "me", "i've", "been", "wondering", "if", "after", "all", "these"]
 
 def only_vowels(s):
@@ -96,7 +100,7 @@ for num in l:
 nums_cubed = {num: num ** 3 for num in l}
 print(nums_cubed)
 
-# Example: Given a list of words, create a map from word to length of word for all
+# Example: Given a list of words, create a dictionary from word to length of word for all
 #          words that start with "g" (capital or lowercase)
 sentence = "Golden geese grazed peacefully near the old garden gate"
 word_lengths = {word: len(word) for word in sentence.split() if word[0] in ('g', 'G')}

@@ -19,7 +19,7 @@ def print_multiplication_table():
             print(i * j, end="\t")
         print()
 
-# Write a function that prints the first n rows of Pascal's Triangle.
+# Write a function that returns the first n rows of Pascal's Triangle.
 # Pascal's Triangle looks like this:
 #
 #        1
@@ -31,12 +31,15 @@ def print_multiplication_table():
 # 1 6 15 20 15 6 1
 #       ...
 #
-# Don't worry about formatting the output (i.e. lining up horizontally). Your output will look like:
-# 1
-# 1 1
-# 1 2 1
-# ...
+# Solution:
+def pascals_triangle(n):
+    l = [[1]]
+    for i in range(1, n):
+        new_row = [1] * (i+1)
+        for j in range(1, i):
+            new_row[j] = l[i - 1][j - 1] + l[i - 1][j]
+        l.append(new_row)
+    return l
 
-
-
+# print(pascals_triangle(10))
 
