@@ -1,5 +1,6 @@
 # To learn sorting, should be familiar with:
 # - Nested loops
+# - Recursion (for merge sort)
 
 
 # NESTED LOOPS EXERCISES

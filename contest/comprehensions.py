@@ -45,6 +45,8 @@ print(l)
 # Exercise: Create a 10x10 2D list where each element is the product of the indices
 # Exercise: Given a list of numbers as well as a number n, create a list of all numbers from 1 to n (inclusive)
 #       that are NOT in the given list
+# Exercise: Write a function that takes a string as input and returns the reverse of the string
+# Exercise: Count the number of vowels in a string
 
 
 # Set Comprehension
