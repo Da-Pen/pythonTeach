@@ -125,9 +125,6 @@ print(binary_search([1, 4, 7, 12, 13, 25, 40], 25))
 # Binary search that returns index
 # Question: what is the problem with the previous binary search? Why can't it return the index?
 # Solution:
-
-l = [1, 3, 4, 6, 7, 10, 12]
-
 def binary_search_return_index_helper(l, target, start, end):
     if start >= end:  # Base case: Target not found
         return None
