@@ -150,3 +150,33 @@ print(binary_search_return_index([1, 4, 7, 12, 13, 25, 40], 25))
 # Exercise: Write a function that returns the sum of all elements of an array (without using any loops or the sum() function)
 # Exercise: Write a function that takes a string as input and returns the reverse of the string
 # Exercise: Count the number of vowels in a string
+# Exercise: Print all binary numbers with a certain number of digits. Solution:
+def print_all_binary_numbers_helper(cur_number, num_digits):
+    if num_digits == 0:
+        print(cur_number)
+        return
+    print_all_binary_numbers_helper(cur_number + "0", num_digits - 1)
+    print_all_binary_numbers_helper(cur_number + "1", num_digits - 1)
+
+def print_all_binary_numbers(num_digits):
+    print_all_binary_numbers_helper("", num_digits)
+
+print_all_binary_numbers(4)
+
+
+# Exercise: write a function that takes a list of coins and a target and returns whether some
+# combination of the coins can add up to the target
+def can_make_change(coins, target):
+    if target == 0:
+        return True
+    if len(coins) == 0:
+        return False
+
+    can_make_change_excluding_first = can_make_change(coins[1:], target)
+    can_make_change_including_first = can_make_change(coins[1:], target - coins[0])
+
+    return can_make_change_excluding_first or can_make_change_including_first
+
+print(can_make_change([10, 3, 4, 2], 15))
+print(can_make_change([10, 3, 4, 3], 15))
+print(can_make_change([20, 4, 1, 15], 15))
