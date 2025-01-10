@@ -85,5 +85,11 @@ run_program()
 #       - They can say_hello(), ex. "Hi, my name is Adrien and I am 10 years old"
 #       - They can get_older() - their age increases by 1
 #   - Create a class called Dog that has a name, breed, color, and weight
-#       - They can bark() - print "woof!"
+#       - They can bark() - print "woof!". If their weight is > 100, they say "WOOF!".
 #       - They can eat(food_weight) - their weight increases by food_weight
+#   - Create a class called Thief that has an amount of money.
+#       - They can rob(other_thief), which will give them all the money the other thief has
+#       - They can work(hours), which will give them $20/h
+#   - Create a class called Boxer that has a name, # wins, # losses, power, and speed.
+#       - They can train(hours) - Their power and speed each go up by a random number between 1 and hours.
+#       - They can fight(other_boxer) - The boxer with a bigger combined speed and power wins. If they are the same, a random boxer wins.
