@@ -40,12 +40,10 @@ class DoublyLinkedList:
             return "[Empty DoublyLinkedList]"
         s = "None <- "
         cur_node = self.head
-        while cur_node:
-            s += str(cur_node.data)
-            if cur_node.next:
-                s += " <-> "
+        while cur_node.next:
+            s += f"{cur_node.data} <-> "
             cur_node = cur_node.next
-        s += " -> None"
+        s += f"{self.tail.data} -> None"
         return s
 
     def __len__(self):
@@ -91,7 +89,7 @@ class DoublyLinkedList:
 
     def insert(self, i, x):
         if  i < 0 or self.length < i:
-            raise IndexError(f"LinkedList index out of range: {i}")
+            raise IndexError(f"DoublyLinkedList index out of range: {i}")
 
         # special cases: insert at beginning or end
         if i == 0:
@@ -122,22 +120,22 @@ class DoublyLinkedList:
         self.length += 1
 
 # Example usage
-dll = DoublyLinkedList()
-print(dll)
-print(len(dll))
-dll.extendleft([3, 2, 1])
-dll.extend([4, 5, 6])
-dll.append(7)
-dll.appendleft(0)
-print(dll)
-print(dll.pop())
-print(dll.popleft())
-dll.clear()
-print(dll)
-print(len(dll))
-# dll.pop()
-dll.insert(0, 2)
-dll.insert(0, 1)
-dll.insert(2, 4)
-dll.insert(2, 3)
-print(dll)
+# dll = DoublyLinkedList()
+# print(dll)
+# print(len(dll))
+# dll.extendleft([3, 2, 1])
+# dll.extend([4, 5, 6])
+# dll.append(7)
+# dll.appendleft(0)
+# print(dll)
+# print(dll.pop())
+# print(dll.popleft())
+# dll.clear()
+# print(dll)
+# print(len(dll))
+# # dll.pop()
+# dll.insert(0, 2)
+# dll.insert(0, 1)
+# dll.insert(2, 4)
+# dll.insert(2, 3)
+# print(dll)
