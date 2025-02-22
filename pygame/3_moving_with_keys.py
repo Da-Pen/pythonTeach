@@ -45,12 +45,15 @@ def run_program():
 run_program()
 
 # Exercises:
-#   - When it is partially outside the screen, it is blue
-#   - Disallow it from going outside the screen
-#   - Create a circle that starts at the center of the screen. Also:
+#   (a) When it is partially outside the screen, it is blue
+#   (b) Disallow it from going outside the screen
+#   (c) Create a circle that starts at the center of the screen. Also:
 #       - It moves with arrow keys.
 #       - When "b" is clicked, it gets bigger.
-#       - When "s" is clicked, it gets smaller, (smallest radius: 1. If s is clicked when the radius is already 1, it doesn't get any smaller).
+#       - When "s" is clicked, it gets smaller, (smallest radius: 1. If s is clicked when
+#         the radius is already 1, it doesn't get any smaller).
 #       - When space is clicked, it resets to the original size.
-#       - Challenge: It can't go outside the screen. That means
+#       - Challenge: It can't go outside the screen. The size increase is also limited,
+#         ex. if you click "b" and the size increase would cause it to go out of the screen,
+#         then disallow it from getting bigger.
 

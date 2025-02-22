@@ -153,7 +153,7 @@ def run_program():
                 pygame.quit()
                 sys.exit()
 
-        challenge_13(screen)
+        challenge_16(screen)
 
         pygame.display.flip()
         clock.tick(60)
