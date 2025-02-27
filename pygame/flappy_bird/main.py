@@ -3,7 +3,7 @@ import sys
 
 import constants
 from bird import Bird
-from pipes import Pipes
+import pipes
 
 def run_program():
     # Initialize Pygame
@@ -18,8 +18,8 @@ def run_program():
     bird = Bird()
 
     # gap between top and bottom pipe. Gets smaller over time.
-    current_pipe_gap_size = constants.START_PIPE_GAP_SIZE
-    pipes = [Pipes(constants.SCREEN_WIDTH, current_pipe_gap_size)]
+    current_pipe_gap_size = pipes.START_GAP_SIZE
+    all_pipes = [pipes.PipePair(constants.SCREEN_WIDTH, current_pipe_gap_size)]
 
     current_game_x_speed = constants.START_GAME_X_SPEED
 
@@ -33,16 +33,16 @@ def run_program():
                     bird.jump()
 
         # check if we need to generate new pipes
-        if constants.SCREEN_WIDTH - pipes[-1].x >= constants.DISTANCE_BETWEEN_PIPES:
-            if current_pipe_gap_size > constants.MIN_PIPE_GAP_SIZE:
-                current_pipe_gap_size -= constants.PIPE_GAP_SIZE_DECREASE
-            pipes.append(Pipes(constants.SCREEN_WIDTH, current_pipe_gap_size))
+        if constants.SCREEN_WIDTH - all_pipes[-1].x >= pipes.DISTANCE_BETWEEN_PIPES:
+            if current_pipe_gap_size > pipes.MIN_GAP_SIZE:
+                current_pipe_gap_size -= pipes.GAP_SIZE_DECREASE
+            all_pipes.append(pipes.PipePair(constants.SCREEN_WIDTH, current_pipe_gap_size))
 
         # update bird position
         bird.fall()
 
         # update pipes positions
-        for pipe in pipes:
+        for pipe in all_pipes:
             pipe.move_left(current_game_x_speed)
 
         # increase game speed
@@ -54,7 +54,7 @@ def run_program():
         # draw bird
         bird.draw(screen)
         # draw pipes
-        for pipe in pipes:
+        for pipe in all_pipes:
             pipe.draw(screen)
 
         pygame.display.flip()
