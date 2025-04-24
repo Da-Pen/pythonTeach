@@ -73,8 +73,48 @@ def run_program():
                     pygame.quit()
                     sys.exit()
 
-
             # detect if hit a bullet
+            # Note: this is NOT the most efficient way to detect bullet collisions. Options:
+            # This solution (both bullets and asteroids are unordered lists)
+            # - Insert new bullet: O(1)
+            # - Insert new asteroid: O(1)
+            # - Bullet collision detection: O(a * b)
+            #
+            # Note that the bullet collision detection is run every frame, while
+            # insertion of new bullets / asteroids is much less frequent
+            #
+            # Keep bullets sorted
+            # - Insert new bullet: O(b)
+            # - Insert new asteroid: O(1)
+            # - Bullet collision detection: O(a * log(b))
+            #
+            # Keep asteroids sorted
+            # - Insert new bullet: O(1)
+            # - Insert new asteroid: O(a)
+            # - Bullet collision detection: O(log(a) * b)
+            #
+            # Keep both asteroids and bullets sorted
+            # - Insert new bullet: O(b)
+            # - Insert new asteroid: O(a)
+            # - Bullet collision detection (two pointer iteration): O(a + b)
+            #
+            # Keep bullets in binary search tree
+            # - Insert new bullet: O(log(b))
+            # - Insert new asteroid: O(1)
+            # - Bullet collision detection: O(log(b) * a)
+            # - Bullet removal: O(log(b))
+            # - Note: the log(b)s are assuming that the tree is balanced. Can
+            #   use a self-balancing tree (like an AVL) to make sure of this.
+            #
+            # Keep asteroids in binary search tree
+            # - Vice versa of above
+            #
+            # Keep asteroids in quad tree
+            # - This is advanced. Will introduce concept but not go in detail
+            #   about time complexities. Just want to give students an idea of
+            #   more possibilities.
+            # - Note that this algorithm specifically applies to 2D space. The
+            #   others are more general
             for bullet in bullets:
                 if asteroid.hit_by_bullet(bullet):
                     asteroids.remove(asteroid)
